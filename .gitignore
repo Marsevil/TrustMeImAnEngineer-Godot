@@ -1,0 +1,10 @@
+# Auto generated files
+.import
+.mono
+*.import*
+
+# Debug
+*crash*
+
+# IDE
+.vscode
