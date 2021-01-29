@@ -18,7 +18,7 @@ public class Player : KinematicBody
 
     public override void _Ready()
     {
-        if (!(cameraPath is null)) camera = GetNode<Camera>(cameraPath);
+        if (cameraPath != null) camera = GetNode<Camera>(cameraPath);
     }
 
     public override void _PhysicsProcess(float delta)
@@ -49,14 +49,12 @@ public class Player : KinematicBody
     }
 
     public void pick() {
-        GD.Print(pickedItem is null);
-        if (!(pickedItem is null)) {
+        if (pickedItem != null) {
             pickedItem.drop();
             pickedItem = null;
         }
-        if (!(pickable is null)) {
-            pickable.pick(this);
-            pickedItem = pickable;
+        if (pickable != null) {
+            pickedItem = pickable.pick(this);
             pickable = null;
         }
     }

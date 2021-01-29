@@ -5,7 +5,18 @@ public class Pickable : RigidBody
 {
     [Export]
     public int pickedHeigth = 5;
-    public void pick(Node newParentNode) {
+    [Export]
+    public Type type;
+
+    public enum Type {
+        GRINDER,
+        HAMMER,
+        PLIERS,
+        SCREWDRIVER,
+        WRENCH
+    }
+
+    public Pickable pick(Node newParentNode) {
         GetParent().RemoveChild(this);
         newParentNode.AddChild(this);
 
@@ -13,6 +24,8 @@ public class Pickable : RigidBody
 
         Translation = new Vector3(0, pickedHeigth, 0);
         AxisLockLinearY = true;
+
+        return this;
     }
 
     public void drop() {
@@ -21,6 +34,9 @@ public class Pickable : RigidBody
 
         parent.RemoveChild(this);
         newParent.AddChild(this);
+
+        Vector3 parentTranslation = (parent as Spatial).Translation;
+        Translation = parentTranslation;
 
         AxisLockLinearY = false;
     }

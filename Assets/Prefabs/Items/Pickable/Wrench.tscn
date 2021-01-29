@@ -1,25 +1,26 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Scripts/Items/Pickable.cs" type="Script" id=1]
-[ext_resource path="res://Assets/Models/Items/Tools/Hammer/Hammer.dae" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Scripts/Items/Pickable/Pickable.cs" type="Script" id=1]
+[ext_resource path="res://Assets/Models/Items/Tools/Wrench/Wrench.dae" type="PackedScene" id=2]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 1, 0.259193, 1 )
+extents = Vector3( 1.46718, 0.0961202, 0.458559 )
 
 [sub_resource type="SphereShape" id=2]
-radius = 2.12396
+radius = 2.39383
 
-[node name="Hammer" type="RigidBody"]
+[node name="Wrench" type="RigidBody"]
 collision_layer = 32
 collision_mask = 5
 script = ExtResource( 1 )
+type = 4
+
+[node name="Wrench" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0426667 )
 
 [node name="Hitbox" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.129875, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0421953, 0.1129, 0 )
 shape = SubResource( 1 )
-
-[node name="Model" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0 )
 
 [node name="Area" type="Area" parent="."]
 collision_layer = 32
