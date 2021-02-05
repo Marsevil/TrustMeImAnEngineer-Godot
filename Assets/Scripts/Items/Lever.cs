@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Lever : Usable
+public class Lever : StaticBody, Usable
 {
 	[Export]
 	public NodePath conveyerPath;
@@ -36,7 +36,7 @@ public class Lever : Usable
 		}
 	}
 
-	public override void use()
+	public void use()
 	{
 		if (conveyer != null) conveyer.switchPosition();
 		state = (state + 1) % 2;

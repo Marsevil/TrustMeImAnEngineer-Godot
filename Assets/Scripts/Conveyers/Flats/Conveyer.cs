@@ -29,6 +29,8 @@ public abstract class Conveyer : StaticBody
     }
     public override void _Ready()
     {
+        base._Ready();
+        
         processConstantVelocity();
     }
 

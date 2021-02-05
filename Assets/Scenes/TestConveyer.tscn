@@ -81,9 +81,6 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 12, 4, 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.117759, 8.45804, 15 )
 contacts_reported = 1
 contact_monitor = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
 
 [node name="Lever" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0 )
