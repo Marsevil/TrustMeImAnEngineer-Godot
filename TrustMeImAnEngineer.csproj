@@ -26,6 +26,8 @@
     <Compile Include="Assets\Scripts\Items\Pickable\Screwdriver.cs" />
     <Compile Include="Assets\Scripts\Items\Pickable\Wrench.cs" />
     <Compile Include="Assets\Scripts\Items\Usable.cs" />
+    <Compile Include="Assets\Scripts\Machines\Machine.cs" />
+    <Compile Include="Assets\Scripts\Machines\Press.cs" />
     <Compile Include="Assets\Scripts\Players\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Assets\Scripts\Conveyers\Corner\CornerFastConveyer.cs" />

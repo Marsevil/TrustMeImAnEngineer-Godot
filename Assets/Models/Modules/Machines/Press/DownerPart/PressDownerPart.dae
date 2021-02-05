@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.91.0 commit date:2020-11-25, commit time:11:06, hash:b50598bc78c7</authoring_tool>
+    </contributor>
+    <created>2021-02-05T13:44:00</created>
+    <modified>2021-02-05T13:44:00</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="palette-effect">
+      <profile_COMMON>
+        <newparam sid="presseBas_png-surface">
+          <surface type="2D">
+            <init_from>presseBas_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="presseBas_png-sampler">
+          <sampler2D>
+            <source>presseBas_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="presseBas_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="presseBas_png" name="presseBas_png">
+      <init_from>presseBas.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="palette-material" name="palette">
+      <instance_effect url="#palette-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ObjObject-mesh" name="ObjObject">
+      <mesh>
+        <source id="ObjObject-mesh-positions">
+          <float_array id="ObjObject-mesh-positions-array" count="180">0 2.1 -0.1 0 2 -3.2 0 2 0 0 2.1 -3.1 0 4.7 0 0 4.7 -0.1 0 4.7 -3.1 0 4.7 -3.2 2.9 4.7 -0.4 2.9 4.4 -2.8 2.9 4.4 -0.4 2.9 4.7 -2.8 0.3 4.4 -0.4 0.3 4.4 -2.8 0.3 4.7 -0.4 0.3 4.7 -2.8 3.2 2 0 3.2 2 -3.2 3.2 2.1 -0.1 3.2 2.1 -3.1 3.2 4.7 0 3.2 4.7 -0.1 3.2 4.7 -3.1 3.2 4.7 -3.2 3.2 2 0 0 4.7 0 0 2 0 3.2 4.7 0 2.9 4.4 -2.8 0.3 4.7 -2.8 0.3 4.4 -2.8 2.9 4.7 -2.8 0.3 4.4 -0.4 0.3 4.7 -0.4 2.9 4.4 -0.4 2.9 4.7 -0.4 0 2 -3.2 0 4.7 -3.2 3.2 2 -3.2 3.2 4.7 -3.2 0 2 -3.2 3.2 2 0 0 2 0 3.2 2 -3.2 0.3 4.4 -0.4 2.9 4.4 -0.4 0.3 4.4 -2.8 2.9 4.4 -2.8 0 4.7 0 3.2 4.7 0 0 4.7 -0.1 3.2 4.7 -0.1 0.3 4.7 -0.4 2.9 4.7 -0.4 0.3 4.7 -2.8 2.9 4.7 -2.8 0 4.7 -3.1 3.2 4.7 -3.1 0 4.7 -3.2 3.2 4.7 -3.2</float_array>
+          <technique_common>
+            <accessor source="#ObjObject-mesh-positions-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ObjObject-mesh-normals">
+          <float_array id="ObjObject-mesh-normals-array" count="45">-1 0 0 1 0 0 1 5.71573e-7 0 1 0 0 1 4.47035e-7 0 0 0 1 0 0 -1 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 -1.52832e-7 0 1 0 0 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#ObjObject-mesh-normals-array" count="15" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ObjObject-mesh-map-0">
+          <float_array id="ObjObject-mesh-map-0-array" count="264">0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.123047 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5 0.119141 0.5</float_array>
+          <technique_common>
+            <accessor source="#ObjObject-mesh-map-0-array" count="132" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ObjObject-mesh-vertices">
+          <input semantic="POSITION" source="#ObjObject-mesh-positions"/>
+        </vertices>
+        <triangles material="palette-material" count="44">
+          <input semantic="VERTEX" source="#ObjObject-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ObjObject-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ObjObject-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 3 0 3 1 0 4 0 0 5 4 0 6 0 0 7 2 0 8 5 0 9 3 0 10 0 0 11 5 0 12 0 0 13 4 0 14 6 0 15 1 0 16 3 0 17 6 0 18 3 0 19 5 0 20 7 0 21 1 0 22 6 0 23 8 0 24 9 0 25 10 0 26 11 0 27 9 0 28 8 0 29 12 1 30 13 1 31 14 1 32 14 1 33 13 1 34 15 1 35 16 1 36 17 2 37 18 3 38 18 3 39 17 2 40 19 4 41 16 1 42 18 3 43 20 1 44 18 3 45 19 4 46 21 1 47 20 1 48 18 3 49 21 1 50 19 4 51 17 2 52 22 1 53 21 1 54 19 4 55 22 1 56 22 1 57 17 2 58 23 1 59 24 5 60 25 5 61 26 5 62 27 5 63 25 5 64 24 5 65 28 5 66 29 5 67 30 5 68 31 5 69 29 5 70 28 5 71 32 6 72 33 6 73 34 6 74 34 6 75 33 6 76 35 6 77 36 6 78 37 6 79 38 6 80 38 6 81 37 6 82 39 6 83 40 7 84 41 7 85 42 7 86 43 7 87 41 7 88 40 7 89 44 8 90 45 8 91 46 8 92 46 8 93 45 8 94 47 8 95 48 8 96 49 8 97 50 8 98 50 8 99 49 8 100 51 9 101 50 8 102 51 9 103 52 10 104 52 10 105 51 9 106 53 11 107 50 8 108 52 10 109 54 8 110 53 11 111 51 9 112 55 12 113 50 8 114 54 8 115 56 13 116 54 8 117 55 12 118 56 13 119 55 12 120 51 9 121 57 14 122 56 13 123 55 12 124 57 14 125 56 13 126 57 14 127 58 8 128 58 8 129 57 14 130 59 8 131</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="ObjObject" name="ObjObject" type="NODE">
+        <matrix sid="transform">1 0 0 -1.615525 0 -4.37114e-8 -1 -1.607604 0 1 -4.37114e-8 -2.008702 0 0 0 1</matrix>
+        <instance_geometry url="#ObjObject-mesh" name="ObjObject">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="palette-material" target="#palette-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

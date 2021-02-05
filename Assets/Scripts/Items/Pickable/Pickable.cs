@@ -40,13 +40,4 @@ public class Pickable : RigidBody
 
         AxisLockLinearY = false;
     }
-    public void _on_Area_body_entered(object obj) {
-        Player player = obj as Player;
-        if (player != null) player.pickable = this;
-    }
-
-    public void _on_Area_body_exited(object obj) {
-        Player player = obj as Player;
-        if (player != null) player.pickable = null;
-    }
 }

@@ -20,9 +20,9 @@ public abstract class Conveyer : StaticBody
         Vector3 force = getForce();
 
         // Apply rotation
-        force = force.Rotated(rotaX, rota.x);
-        force = force.Rotated(rotaY, rota.y);
-        force = force.Rotated(rotaZ, rota.z);
+        if (rotaX.IsNormalized()) force = force.Rotated(rotaX, rota.x);
+        if (rotaY.IsNormalized()) force = force.Rotated(rotaY, rota.y);
+        if (rotaZ.IsNormalized()) force = force.Rotated(rotaZ, rota.z);
 
         // Vector is applied.
         ConstantLinearVelocity = force;

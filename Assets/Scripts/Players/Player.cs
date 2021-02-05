@@ -58,4 +58,14 @@ public class Player : KinematicBody
             pickable = null;
         }
     }
+
+    public void bodyEnteredInteractionArea(Node body) {
+        if (body is Usable) usable = body as Usable;
+        else if (body is Pickable) pickable = body as Pickable;
+    }
+
+    public void bodyExitedInteractionArea(Node body) {
+        if (body is Usable) usable = null;
+        else if (body is Pickable) pickable = null;
+    }
 }
