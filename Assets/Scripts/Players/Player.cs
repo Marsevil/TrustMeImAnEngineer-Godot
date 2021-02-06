@@ -30,7 +30,7 @@ public class Player : KinematicBody
         force.x = Input.GetActionStrength("ui_left") - Input.GetActionStrength("ui_right");
 
         if (Input.IsActionJustPressed("use")) use();
-        if (Input.IsActionJustPressed("ui_accept")) pick();
+        if (Input.IsActionJustPressed("pick")) pick();
 
         // Constant speed in diagonal.
         force.Normalized();
