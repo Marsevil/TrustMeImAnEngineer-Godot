@@ -37,7 +37,7 @@ public class Press : Machine
         return process;
     }
 
-    public override void use()
+    public override void use(Player player)
     {
         if (!status) {
             setProcess(process + PROCESS_STEP);

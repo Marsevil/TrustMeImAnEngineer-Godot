@@ -12,8 +12,8 @@ public class Player : KinematicBody
 
     private Camera camera = null;
 
-    public Usable usable = null;
-    public Pickable pickable = null;
+    private Usable usable = null;
+    private Pickable pickable = null;
     private Pickable pickedItem = null;
 
     public override void _Ready()
@@ -45,13 +45,21 @@ public class Player : KinematicBody
     }
 
     public void use() {
-        if (usable != null) usable.use();
+        if (usable != null) usable.use(this);
+    }
+
+    public Pickable getPickedItem() {
+        return pickedItem;
+    }
+
+    public void dropItem() {
+        pickedItem.drop();
+        pickedItem = null;
     }
 
     public void pick() {
         if (pickedItem != null) {
-            pickedItem.drop();
-            pickedItem = null;
+            dropItem();
         }
         if (pickable != null) {
             pickedItem = pickable.pick(this);

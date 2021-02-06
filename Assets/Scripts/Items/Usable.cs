@@ -3,5 +3,5 @@ using System;
 
 public interface Usable
 {
-    void use();
+    void use(Player player);
 }

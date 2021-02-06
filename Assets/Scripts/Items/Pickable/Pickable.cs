@@ -8,12 +8,39 @@ public class Pickable : RigidBody
     [Export]
     public Type type;
 
+    private CollisionShape hitbox;
+
+    public static readonly string PATH_2_PICKABLE_ITEM = "res://Assets/Prefabs/Items/Pickable";
+
     public enum Type {
         GRINDER,
         HAMMER,
         PLIERS,
         SCREWDRIVER,
         WRENCH
+    }
+
+    public static Pickable instanciateItem(Type type) {
+        Pickable newPickable;
+        switch(type) {
+            case Type.GRINDER:
+                newPickable = GD.Load<PackedScene>(PATH_2_PICKABLE_ITEM + "/Grinder.tscn").Instance() as Pickable;
+                break;
+            case Type.HAMMER:
+                newPickable = GD.Load<PackedScene>(PATH_2_PICKABLE_ITEM + "/Hammer.tscn").Instance() as Pickable;
+                break;
+            case Type.PLIERS:
+                newPickable = GD.Load<PackedScene>(PATH_2_PICKABLE_ITEM + "/Pliers.tscn").Instance() as Pickable;
+                break;
+            case Type.SCREWDRIVER:
+                newPickable = GD.Load<PackedScene>(PATH_2_PICKABLE_ITEM + "/Screwdriver.tscn").Instance() as Pickable;
+                break;
+            default:
+                newPickable = GD.Load<PackedScene>(PATH_2_PICKABLE_ITEM + "/Wrench.tscn").Instance() as Pickable;
+                break;
+        }
+
+        return newPickable;
     }
 
     public Pickable pick(Node newParentNode) {

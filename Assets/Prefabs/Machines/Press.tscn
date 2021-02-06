@@ -4,10 +4,10 @@
 [ext_resource path="res://Assets/Models/Modules/Machines/Press/UpperPart/PressUpperPart.dae" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Scripts/Machines/Press.cs" type="Script" id=3]
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 1.98707, 1.62848, 0.001 )
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 2.01947, 1.6943, 1.99787 )
 
 [node name="Press" type="StaticBody"]
@@ -17,7 +17,7 @@ script = ExtResource( 3 )
 
 [node name="Stunner" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.046892, 5.64955, 1.06436 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="PressUpperPart" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 6.25, 0 )
@@ -27,4 +27,4 @@ transform = Transform( -2.03651e-07, 0, 1.25, 0, 1.25, 0, -1.25, 0, -2.03651e-07
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0216007, 1.66428, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )

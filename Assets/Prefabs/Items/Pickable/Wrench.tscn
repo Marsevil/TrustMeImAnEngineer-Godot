@@ -12,9 +12,9 @@ collision_mask = 5
 script = ExtResource( 1 )
 type = 4
 
-[node name="Wrench" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0426667 )
-
 [node name="Hitbox" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0421953, 0.1129, 0 )
 shape = SubResource( 1 )
+
+[node name="Wrench" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0426667 )

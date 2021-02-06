@@ -17,5 +17,5 @@ public abstract class Machine : SlowConveyer, Usable
         GetChild<CollisionShape>(0).Disabled = true;
     }
 
-    public abstract void use();
+    public abstract void use(Player player);
 }

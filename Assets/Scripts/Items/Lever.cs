@@ -36,7 +36,7 @@ public class Lever : StaticBody, Usable
 		}
 	}
 
-	public void use()
+	public void use(Player player)
 	{
 		if (conveyer != null) conveyer.switchPosition();
 		state = (state + 1) % 2;
