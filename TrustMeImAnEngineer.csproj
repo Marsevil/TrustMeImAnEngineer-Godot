@@ -30,6 +30,7 @@
     <Compile Include="Assets\Scripts\Machines\Press.cs" />
     <Compile Include="Assets\Scripts\Machines\WeldingStation.cs" />
     <Compile Include="Assets\Scripts\Players\Player.cs" />
+    <Compile Include="Assets\Scripts\Portals\Portal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Assets\Scripts\Conveyers\Corner\CornerFastConveyer.cs" />
     <Compile Include="Assets\Scripts\Conveyers\Corner\CornerMediumConveyer.cs" />
