@@ -3,12 +3,10 @@ using System;
 
 public abstract class Conveyer : StaticBody
 {
-    protected void processConstantVelocity() {
+    protected void processConstantVelocity()
+    {
         // Get rotation angle for each parent.
-        Vector3 rota = new Vector3();
-        for (Spatial node = this; node != null; node = node.GetParent() as Spatial) {
-            rota += node.Rotation;
-        }
+        Vector3 rota = GlobalTransform.basis.GetEuler();
 
         // Create vector for each axis.
         Vector3 rotaX = new Vector3();
@@ -30,7 +28,7 @@ public abstract class Conveyer : StaticBody
     public override void _Ready()
     {
         base._Ready();
-        
+
         processConstantVelocity();
     }
 
