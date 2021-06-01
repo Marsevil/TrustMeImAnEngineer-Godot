@@ -5,7 +5,7 @@ public class DirectionalConveyer : Conveyer
 {
     [Export]
     public int position = 0;
-    private Vector3[] forces = {new Vector3(0, 0, 10), new Vector3(10, 0, 0)};
+    private Vector3[] forces = new Vector3[2];
     private Vector3 ROTA_Y = new Vector3(0, 1, 0);
     private Spatial arrow;
     private Spatial wall;
@@ -20,6 +20,9 @@ public class DirectionalConveyer : Conveyer
 
         arrow.Rotate(ROTA_Y, SQUARE_ANGLE * position);
         wall.Rotate(ROTA_Y, SQUARE_ANGLE * position);
+
+        forces[0] = GlobalTransform.basis.z * 10;
+        forces[1] = GlobalTransform.basis.x * 10;
     }
 
     public void switchPosition() {

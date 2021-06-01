@@ -8,8 +8,7 @@ public class SlowConveyer : Conveyer
         base._Ready();
     }
     
-    public static readonly Vector3 SPEED = new Vector3(0, 0, 5);
     public override Vector3 getForce() {
-        return SPEED;
+        return GlobalTransform.basis.z * 5;
     }
 }

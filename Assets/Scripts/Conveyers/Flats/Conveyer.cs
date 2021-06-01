@@ -8,22 +8,9 @@ public abstract class Conveyer : StaticBody
         // Get rotation angle for each parent.
         Vector3 rota = GlobalTransform.basis.GetEuler();
 
-        // Create vector for each axis.
-        Vector3 rotaX = new Vector3();
-        Vector3 rotaY = new Vector3();
-        Vector3 rotaZ = new Vector3();
-        if (rota.x < -1 || rota.x > 1) rotaX.x = 1;
-        if (rota.y < -1 || rota.y > 1) rotaY.y = 1;
-        if (rota.z < -1 || rota.z > 1) rotaZ.z = 1;
-        Vector3 force = getForce();
+        ConstantLinearVelocity = getForce();
 
-        // Apply rotation
-        if (rotaX.IsNormalized()) force = force.Rotated(rotaX, rota.x);
-        if (rotaY.IsNormalized()) force = force.Rotated(rotaY, rota.y);
-        if (rotaZ.IsNormalized()) force = force.Rotated(rotaZ, rota.z);
-
-        // Vector is applied.
-        ConstantLinearVelocity = force;
+        GD.Print(Name + " : " + ConstantLinearVelocity);
     }
     public override void _Ready()
     {
