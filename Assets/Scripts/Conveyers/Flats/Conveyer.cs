@@ -9,8 +9,6 @@ public abstract class Conveyer : StaticBody
         Vector3 rota = GlobalTransform.basis.GetEuler();
 
         ConstantLinearVelocity = getForce();
-
-        GD.Print(Name + " : " + ConstantLinearVelocity);
     }
     public override void _Ready()
     {

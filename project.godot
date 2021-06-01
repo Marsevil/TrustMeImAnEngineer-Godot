@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="TrustMeImAnEngineer"
-run/main_scene="res://Assets/Scenes/TestConveyer.tscn"
+run/main_scene="res://Assets/Scenes/TestPlayer.tscn"
 config/icon="res://icon.png"
 
 [input]
