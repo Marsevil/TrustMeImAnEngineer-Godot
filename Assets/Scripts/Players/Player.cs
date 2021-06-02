@@ -33,7 +33,7 @@ public class Player : KinematicBody
         if (Input.IsActionJustPressed("pick")) pick();
 
         // Constant speed in diagonal.
-        force.Normalized();
+        force = force.Normalized();
         force *= speed;
 
         // Apply camera rotation
