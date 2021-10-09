@@ -70,6 +70,10 @@ pick={
 3d_physics/layer_5="Usable"
 3d_physics/layer_6="Pickable"
 
+[mono]
+
+debugger_agent/wait_for_debugger=true
+
 [physics]
 
 3d/physics_engine="GodotPhysics"

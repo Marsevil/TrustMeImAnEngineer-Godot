@@ -1,8 +1,7 @@
 using Godot;
 using System;
 
-public class Pickable : RigidBody
-{
+public class Pickable : RigidBody {
     [Export]
     public int pickedHeigth = 5;
     [Export]

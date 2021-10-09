@@ -2,6 +2,7 @@
 .import
 .mono
 *.import*
+**/*.csproj
 
 # Debug
 *crash*

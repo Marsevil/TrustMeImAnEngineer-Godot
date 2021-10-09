@@ -3,6 +3,7 @@ using System;
 
 public class Portal : Area
 {
+	private const float EXIT_OFFSET = 2.0f;
 	[Export]
 	public NodePath otherPortalPath;
 	private Portal otherPortal = null;
@@ -19,7 +20,7 @@ public class Portal : Area
 
 	public void teleport(Player player) {
         // Player should not spawn in the portal, so an offset of 2 times z vector is applied.
-		Vector3 exitPosition = GlobalTransform.origin + GlobalTransform.basis.z * 2;
+		Vector3 exitPosition = GlobalTransform.origin + GlobalTransform.basis.z * EXIT_OFFSET;
 		Vector3 enterPosition = player.GlobalTransform.origin;
         // Process of the translation between the position of the player and the position of the portal.
 		Vector3 translation = exitPosition - enterPosition;
