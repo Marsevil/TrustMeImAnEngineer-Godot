@@ -10,7 +10,7 @@ public class Player : KinematicBody
     [Export]
     public int gravity;
 
-    private Camera camera = null;
+    private Godot.Camera camera = null;
 
     private Usable usable = null;
     private Pickable pickable = null;
@@ -18,7 +18,7 @@ public class Player : KinematicBody
 
     public override void _Ready()
     {
-        if (cameraPath != null) camera = GetNode<Camera>(cameraPath);
+        if (cameraPath != null) camera = GetNode<Godot.Camera>(cameraPath);
     }
 
     public override void _PhysicsProcess(float delta)
